@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html_content = """<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -46,9 +48,15 @@
 </head>
 <body>
     <div class="container">
-        <h1> Com AMOR ICARO SOARES 💌</h1>
+        <h1>Com AMOR ICARO SOARES 💌</h1>
         <p>Clique no botão abaixo para abrir sua carta em PDF.</p>
         <a href="https://drive.google.com/file/d/1zrqv-j7wIZvCXOEV6D2TSnCRd77-sHnC/view?usp=drive_link" target="_blank">Abrir Carta</a>
     </div>
 </body>
 </html>
+"""
+
+file_path = "/mnt/data/index.html"
+Path(file_path).write_text(html_content, encoding="utf-8")
+
+file_path
